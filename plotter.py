@@ -13,8 +13,10 @@ app = Flask(__name__ , static_url_path='/static', static_folder= str(os.getcwd()
 
 x = [0,1,2,3,4,5,6]
 y = [1,3,2,4,6,5,4]
+# Estos arrays simulan un ECG en el tiempo
 tiempo = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
 ecg = [1,1,2,1,1,0,12,0,1,3,1,1.5,1,1,1,1,1,2,1,1,0,12,0,1,3,1,1.5,1,1,1]
+# Variables globales de pulso sanguineo
 cbpm = 0
 lbpm = 0
 
@@ -46,12 +48,6 @@ def build_plot():
 def build_vpc():
 
     img = io.BytesIO()
-
-    plt.plot(x,y)
-    plt.title("Temperatura [°C]")
-    plt.xlabel("Samples")
-    plt.ylabel("Temperatura")
-    plt.savefig(img, format='png')
     img.seek(0)
     rand = randrange(90,99,2)
     global lbpm
