@@ -78,6 +78,10 @@ def vpc3():
 def vpc3all():
     return render_template("VPC1_3_all.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "<h1>404</h1><p>VirtualPatientCare. The resource could not be found.</p>", 404
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
