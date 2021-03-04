@@ -6,8 +6,8 @@ import os
 import io
 import base64
 from jinja2 import Markup
-from pyecharts.charts import Line
-from pyecharts import options as opts
+#from pyecharts.charts import Line
+#from pyecharts import options as opts
 
 app = Flask(__name__ , static_url_path='/static', static_folder= str(os.getcwd()) + '/static',)
 
@@ -53,18 +53,26 @@ def build_vpc():
     global lbpm
     global cbpm
     lbpm = cbpm
+    ecgnor = [1,1,2,1,1,0,12,0,1,3,1,1.5,1,1,1]
+    ecgmio = [1,1,2,1,1,0,12,1,3,5,2,1.5,1,1,1]
+    
     cbpm = randrange(65,70,1)
     pmax = randrange(70, 140, 2)
     pmin = randrange(30,80, 2)
 
     tiempo.append((len(tiempo) - 1) + 1)
-    ecg.append(randrange(0,12,2))
+    valorecg = randrange(0,12,1)
+    if (valorecg > 4) and (valorecg < 8):
+       alarma = 'Detectado un posible problema de miocardio. Revisar ECG'
+    else:
+       alarma = ''
+    ecg.append(randrange(0,12,1))
 
     plot_url = base64.b64encode(img.getvalue()).decode()
     pagina = '<html><head><meta http-equiv="refresh" content="3"></head><body><img src="data:image/png;base64,{}"></body></html>'
 
     #return pagina.format(plot_url)
-    return render_template("VPC1.html", x = tiempo, y = ecg, cbpm = cbpm, lbpm = lbpm, spo2 = rand, pmax = pmax, pmin = pmin)
+    return render_template("VPC1.html", x = tiempo, y = ecg, cbpm = cbpm, lbpm = lbpm, spo2 = rand, pmax = pmax, pmin = pmin, alarma = alarma)
 
 @app.route('/index.html', methods=['GET'])
 def vpc2():
