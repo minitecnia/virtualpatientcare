@@ -6,10 +6,25 @@ import os
 import io
 import base64
 from jinja2 import Markup
-#from pyecharts.charts import Line
-#from pyecharts import options as opts
+import sqlite3 as sql
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__ , static_url_path='/static', static_folder= str(os.getcwd()) + '/static',)
+
+# Database instancia
+basedir = './'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'soraia.db')
+db = SQLAlchemy(app)
+
+class PATIENTS(db.Model):
+    ID = db.Column(db.Integer, primary_key=True)
+    PATIENT = db.Column(db.Integer, unique=True)
+    SPO2 = db.Column(db.Integer, unique=True)
+    BPM = db.Column(db.Integer)
+    PRESSLOW = db.Column(db.Integer)
+    PRESSHIGH = db.Column(db.Integer)
+    TEMP = db.Column(db.Integer)
+    DATETIME = db.Column(db.Text)
 
 x = [0,1,2,3,4,5,6]
 y = [1,3,2,4,6,5,4]
@@ -19,6 +34,22 @@ ecg = [1,1,2,1,1,0,12,0,1,3,1,1.5,1,1,1,1,1,2,1,1,0,12,0,1,3,1,1.5,1,1,1]
 # Variables globales de pulso sanguineo
 cbpm = 0
 lbpm = 0
+
+@app.route('/patient', endpoint="patient", methods=["GET"])
+def patient():
+    values = PATIENTS.query.order_by(PATIENTS.DATETIME).all()
+
+    return jsonify({
+        "items": [{
+            "id": x.ID, 
+            "Paciente": x.PATIENT, 
+            "SpO2": x.SPO2,
+            "Pulsaciones": x.BPM,
+            "Presion low": x.PRESSLOW,
+            "Presion alta": x.PRESSHIGH,
+            "Fecha-hora": x.DATETIME,
+            } for x in values]
+    })
 
 @app.route('/plot')
 def build_plot():
