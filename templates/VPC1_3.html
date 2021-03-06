@@ -9,7 +9,7 @@
         <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
         <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
         <meta name="author" content="PIXINVENT">
-        <title>Virtual Pacient Care</title>
+        <title>SoraIA</title>
         <link rel="apple-touch-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/apple-icon-120.png">
         <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/favicon.ico">
         <link href="/static/style/css" rel="stylesheet">
@@ -234,7 +234,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown dropdown-user nav-item">
-                                <a class="dropdown-toggle nav-link dropdown-user-link" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700">John Doe</span><span class="avatar avatar-online"><img src="./VPC1_files/avatar-s-19.png" alt="avatar"><i></i></span></a>
+                                <a class="dropdown-toggle nav-link dropdown-user-link" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700">John Doe</span><span class="avatar avatar-online"><img src="/static/images/avatar-s-19.png" alt="avatar"><i></i></span></a>
 
                             </li>
                         </ul>
@@ -256,7 +256,7 @@
                             </li>
                             <li><a class="menu-item" href="#"><i></i><span data-i18n="eCommerce">Screen 2</span></a>
                             </li>
-                            <li><a class="menu-item" href="#"><i></i><span data-i18n="Crypto">Patient list</span></a>
+                            <li><a class="menu-item" href="#"><i></i><span data-i18n="pacientes">Patient list</span></a>
                             </li>
                         </ul>
                     </li>
@@ -274,20 +274,19 @@
                 <div class="content-body">
                     <!-- Revenue, Hit Rate & Deals -->
                     
-                    
                     <!--/ Emails Products & Avg Deals -->
                     <!-- Total earning & Recent Sales  -->
                     <div class="row">
-                        
                         <div id="recent-sales" class="col-12 col-md-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Recent Sales</h4>
+                                    <h4 class="card-title">Intensive Care Patients</h4>
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
                                             <li>
-                                                <a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right" href="./VPC1_3_all.html" target="_blank">View all</a></li>
+                                                <a class="btn btn-sm btn-danger box-shadow-2 round btn-min-width pull-right" href="./VPC1_3_all.html" target="_blank">View all</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -300,151 +299,14 @@
                                                     <th class="border-top-0">User</th>
                                                     <th class="border-top-0">Categories</th>
                                                     <th class="border-top-0">Name</th>
+                                                    <th class="border-top-0">Age</th>
+                                                    <th class="border-top-0">Genre</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                {% for row in patients %}
                                                 <tr>
-                                                    <td class="text-truncate">Box 1</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-4.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-danger round">Critical</button>
-                                                    </td>
-                                                    <td class="text-truncate">Amparo Larrañaga</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 2</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-1.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Ricardo Tormo</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 3</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-2.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Carmen Polo</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 4</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-3.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Javier Menen</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 5</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-5.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-danger round">Critical</button>
-                                                    </td>
-                                                    <td class="text-truncate">Josua Moguriza García</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 6</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-6.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Maite García</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 7</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-7.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Mauro Sterling</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 8</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-8.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Lucee Lee</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 9</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-11.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-success round">Stable</button>
-                                                    </td>
-                                                    <td class="text-truncate">Alberto Manzano</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 10</td>
-                                                    <td class="text-truncate p-1">
-                                                        <ul class="list-unstyled users-list m-0">
-                                                            <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
-                                                                <img class="media-object rounded-circle" src="/static/images/avatar-s-12.png" alt="Avatar">
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-outline-danger round">Critical</button>
-                                                    </td>
-                                                    <td class="text-truncate">Amparo García</td>                                                    
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-truncate">Box 11</td>
+                                                    <td class="text-truncate">{{ row[3] }}</td>
                                                     <td class="text-truncate p-1">
                                                         <ul class="list-unstyled users-list m-0">
                                                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons" class="avatar avatar-sm pull-up">
@@ -455,10 +317,11 @@
                                                     <td>
                                                         <button type="button" class="btn btn-sm btn-outline-danger round">Critical</button>
                                                     </td>
-                                                    <td class="text-truncate">Amperio García</td>                                                    
+                                                    <td class="text-truncate">{{ row[1] }}</td>
+                                                    <td class="text-truncate">{{ row[2] }}</td>
+                                                    <td class="text-truncate">{{ row[2] }}</td>                                                
                                                 </tr>
-                                                
-                                                
+                                                {% endfor %}       
                                             </tbody>
                                         </table>
                                     </div>
@@ -778,8 +641,6 @@
         </div>
         <!-- End: Customizer-->
         <!-- Buynow Button-->
-        <div class="buy-now"><a href="https://1.envato.market/modern_admin" target="_blank" class="btn btn-info btn-glow round px-2">Buy Now</a>
-        </div>
         <div class="sidenav-overlay" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
         <div class="drag-target" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
         <!-- BEGIN: Footer-->
@@ -788,20 +649,20 @@
         </footer>
         <!-- END: Footer-->
         <!-- BEGIN: Vendor JS-->
-        <script src="/static/js/vendors.min.js.descarga"></script>
+        <script src="/static/js/vendors.min.js"></script>
         <!-- BEGIN Vendor JS-->
         <!-- BEGIN: Page Vendor JS-->
         <script src="/static/js/chart.min.js"></script>
         <script src="/static/js/raphael-min.js"></script>
         <script src="/static/js/morris.min.js"></script>
-        <script src="/static/js/jquery-jvectormap-2.0.3.min.js.descarga"></script>
-        <script src="/static/js/jquery-jvectormap-world-mill.js.descarga"></script>
-        <script src="/static/js/visitor-data.js.descarga"></script>
+        <script src="/static/js/jquery-jvectormap-2.0.3.min.js"></script>
+        <script src="/static/js/jquery-jvectormap-world-mill.js"></script>
+        <script src="/static/js/visitor-data.js"></script>
         <!-- END: Page Vendor JS-->
         <!-- BEGIN: Theme JS-->
         <script src="/static/js/app-menu.min.js"></script>
         <script src="/static/js/app.min.js"></script>
-        <script src="/static/js/customizer.min.js.descarga"></script>
+        <script src="/static/js/customizer.min.js"></script>
         <script src="/static/js/footer.min.js"></script>
         <!-- END: Theme JS-->
         <!-- BEGIN: Page JS-->
