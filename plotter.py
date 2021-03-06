@@ -11,10 +11,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__ , static_url_path='/static', static_folder= str(os.getcwd()) + '/static',)
 
-# Database instancia
-basedir = './'
+basedir = './db/'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'soraia.db')
+DATABASE = basedir + 'soraia.db'
 db = SQLAlchemy(app)
+app.config["DEBUG"] = True
 
 class PATIENTS(db.Model):
     ID = db.Column(db.Integer, primary_key=True)
@@ -25,6 +26,14 @@ class PATIENTS(db.Model):
     PRESSHIGH = db.Column(db.Integer)
     TEMP = db.Column(db.Integer)
     DATETIME = db.Column(db.Text)
+
+class PATIENTSLIST(db.Model):
+    ID = db.Column(db.Integer, primary_key=True)
+    PATIENT = db.Column(db.Text)
+    AGE = db.Column(db.Integer)
+    BOX = db.Column(db.Integer)
+    CHECKING = db.Column(db.Text)
+    CHECKOUT = db.Column(db.Text)
 
 x = [0,1,2,3,4,5,6]
 y = [1,3,2,4,6,5,4]
@@ -111,7 +120,13 @@ def vpc2():
 
 @app.route('/VPC1_3.html', methods=['GET'])
 def vpc3():
-    return render_template("VPC1_3.html")
+    con = sql.connect(DATABASE)
+    con.row_factory = sql.Row
+    cur = con.cursor()
+    cur.execute("select * from PATIENTSLIST")
+                    
+    pacientes = cur.fetchall()
+    return render_template("VPC1_3.html", patients = pacientes)
 
 @app.route('/VPC1_3_all.html', methods=['GET'])
 def vpc3all():
