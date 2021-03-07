@@ -10,4 +10,6 @@ Desde esta página: https://www.sqlite.org/download.html
 
 Con el comando siguiente: sudo apt-get install sqlite3
 
+# Uso de postgreSQL
 
+En desarrollo
