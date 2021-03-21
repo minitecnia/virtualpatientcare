@@ -18,4 +18,4 @@ Activar el servidor REST python desde la misma carpeta donde se encuentra el .py
 
 Visualizar en el navegador:
 
-- En un navegador escribir: http://localhost:5000/vpc
+- En un navegador escribir: http://localhost:5000/
