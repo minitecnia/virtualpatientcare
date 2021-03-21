@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Soraia Dashboard</title>
+    <title>Soraia Box</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="refresh" content="5">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
     <!--
     =========================================================
     * ArchitectUI HTML Theme Dashboard - v1.0.0
@@ -20,9 +22,7 @@
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-<!--<link href="./main.css" rel="stylesheet">-->
-<link href="./static/styles/main.css" rel="stylesheet">
-</head>
+<link href="./static/styles/main.css" rel="stylesheet"></head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
@@ -67,7 +67,7 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                <i class="nav-link-icon fa fa-info"> </i>
+                                <i class="nav-link-icon fa fa-database"> </i>
                                 Statistics
                             </a>
                         </li>
@@ -83,7 +83,65 @@
                                 Settings
                             </a>
                         </li>
-                    </ul>        </div>
+                        <li class="dropdown nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-bell"></i>
+                                Alerts
+                                <span class="badge badge-pill badge-danger badge-up badge-glow">4</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <h6 class="dropdown-header m-0"><span class="grey darken-2">Notifications</span></h6>
+                                    <span class="notification-tag badge badge-danger float-right m-0">3 New</span>
+                                </li>
+                                <li class="scrollable-container media-list w-100 ps">
+                                    <a href="javascript:void(0)">
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan mr-0"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">Blood presure low</h6>
+                                                <p class="notification-text font-small-3 text-muted">The values are 125/66</p>
+                                                <small>
+                                                    <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">5 minutes ago</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="ft-alert-triangle icon-bg-circle bg-yellow bg-darken-3 mr-0"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading yellow darken-3">12% higher temperature</h6>
+                                                <p class="notification-text font-small-3 text-muted">Body values ​​of 37.8 ºC</p>
+                                                <small>
+                                                    <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">3 minutes ago</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="ft-download-cloud icon-bg-circle bg-red bg-darken-1 mr-0"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading red darken-1">Warning notification</h6>
+                                                <p class="notification-text font-small-3 text-muted">{{ alarma }}</p>
+                                                <small>
+                                                    <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 sec ago</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                    </ul>        
+                </div>
+
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
@@ -104,6 +162,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
                                         {{ nombre }}
@@ -399,8 +458,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
-        <div class="app-main">
+        </div>        <div class="app-main">
                 <div class="app-sidebar sidebar-shadow">
                     <div class="app-header__logo">
                         <div class="logo-src"></div>
@@ -436,7 +494,7 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Home</li>
                                 <li>
-                                    <a href="index.html" class="mm-active">
+                                    <a href="index.html">
                                         <i class="metismenu-icon pe-7s-home"></i>
                                         Home
                                     </a>
@@ -449,33 +507,34 @@
                                 </li>
                                 <li class="app-sidebar__heading">Dashboard</li>
                                 <li>
-                                    <a href="#">
+                                    <!--<a href="#" class="mm-active">-->
+                                    <a href="#" >
                                         <i class="metismenu-icon pe-7s-car"></i>
                                         Boxes
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="box1.html">
+                                            <a href="box1.html" >
                                                 <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 1 Dashboard
+                                                Box 1
                                             </a>
                                         </li>
                                         <li>
                                             <a href="box2.html">
                                                 <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 2 Dashboard
+                                                Box 2
                                             </a>
                                         </li>
                                         <li>
                                             <a href="box3.html">
                                                 <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 3 Dashboard
+                                                Box 3
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="app-sidebar__heading">Alerts</li>
+                                <li class="app-sidebar__heading">Alertas</li>
                                 <li>
                                     <a href="alertas.html">
                                         <i class="metismenu-icon pe-7s-alarm"></i>
@@ -511,7 +570,8 @@
                                             </a>
                                         </li>
                                     </ul>
-                                <li class="app-sidebar__heading">Charts & tables</li>
+                                </li>
+                                <li class="app-sidebar__heading">Charts & Tables</li>
                                 <li>
                                     <a href="charts-chartjs.html">
                                         <i class="metismenu-icon pe-7s-graph2">
@@ -527,17 +587,17 @@
                             </ul>
                         </div>
                     </div>
-                </div>    
-                <div class="app-main__outer">
+                </div>    <div class="app-main__outer">
                     <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-home icon-gradient bg-mean-fruit"></i>
+                                        <i class="pe-7s-video icon-gradient bg-mean-fruit">
+                                        </i>
                                     </div>
-                                    <div>Soraia main board
-                                        <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.
+                                    <div>Soraia Box 1 dashboard
+                                        <div class="page-title-subheading">Box 1 tablero del paciente
                                         </div>
                                     </div>
                                 </div>
@@ -550,7 +610,7 @@
                                             <span class="btn-icon-wrapper pr-2 opacity-7">
                                                 <i class="fa fa-business-time fa-w-20"></i>
                                             </span>
-                                            Buttons
+                                            Alerts
                                         </button>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                                             <ul class="nav flex-column">
@@ -591,19 +651,17 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>    
-                            </div>
-                        </div>            
-                        <div class="row">
+                                </div>    </div>
+                        </div>            <div class="row">
                             <div class="col-md-6 col-xl-4">
                                 <div class="card mb-3 widget-content bg-midnight-bloom">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Total Alerts</div>
-                                            <div class="widget-subheading">Day alerts</div>
+                                            <div class="widget-heading">Breathing rate (BR):</div>
+                                            <div class="widget-subheading">Breathing</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-white"><span>40</span></div>
+                                            <div class="widget-numbers text-white"><span>97 %</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -612,11 +670,11 @@
                                 <div class="card mb-3 widget-content bg-arielle-smile">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Total Patients</div>
-                                            <div class="widget-subheading">Patients count</div>
+                                            <div class="widget-heading">Blood Pressure (BP):</div>
+                                            <div class="widget-subheading">Max / Min pressure</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-white"><span>68</span></div>
+                                            <div class="widget-numbers text-white"><span>{{ bp }}</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -625,11 +683,11 @@
                                 <div class="card mb-3 widget-content bg-grow-early">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
-                                            <div class="widget-heading">Total Attended</div>
-                                            <div class="widget-subheading">Acknowledged alerts</div>
+                                            <div class="widget-heading">Heart rate (BPM):</div>
+                                            <div class="widget-subheading">Rate in beat/minute</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-white"><span>38</span></div>
+                                            <div class="widget-numbers text-white"><span>{{ hr }}</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -649,9 +707,274 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="" align="center">
-                                    <img src="./static/images/main.png">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="mb-3 card">
+                                    <div class="card-header-tab card-header">
+                                        <div class="card-header-title">
+                                            <i class="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
+                                            ECG Electrocardiogram
+                                        </div>
+                                        <div class="btn-actions-pane-right">
+                                            <div class="nav">
+                                                <a href="javascript:void(0);" class="border-0 btn-pill btn-wide btn-transition active btn btn-outline-alternate">Tab 1</a>
+                                                <a href="javascript:void(0);" class="ml-1 btn-pill btn-wide border-0 btn-transition btn btn-outline-alternate second-tab-toggle-alt">Tab 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active show" id="tab-eg-55">
+                                            <div class="widget-chart p-3">
+                                                <div style="height: 300px">
+                                                    <script> var midataset = {{ y }}; var tiempo = {{ x }}; var midataset2 = {{ z }}</script>
+                                                    <canvas id="line-chart"></canvas>
+                                                </div>
+                                                <div class="widget-chart-content text-center mt-5">
+                                                    <div class="widget-description mt-0 text-warning">
+                                                        <i class="fa fa-arrow-left"></i>
+                                                        <span class="pl-1">175.5%</span>
+                                                        <span class="text-muted opacity-8 pl-1">Estado normal</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-2 card-body">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="widget-content">
+                                                            <div class="widget-content-outer">
+                                                                <div class="widget-content-wrapper">
+                                                                    <div class="widget-content-left">
+                                                                        <div class="widget-numbers fsize-3 text-muted">63%</div>
+                                                                    </div>
+                                                                    <div class="widget-content-right">
+                                                                        <div class="text-muted opacity-6">Variable A</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-progress-wrapper mt-1">
+                                                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100" style="width: 63%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="widget-content">
+                                                            <div class="widget-content-outer">
+                                                                <div class="widget-content-wrapper">
+                                                                    <div class="widget-content-left">
+                                                                        <div class="widget-numbers fsize-3 text-muted">32%</div>
+                                                                    </div>
+                                                                    <div class="widget-content-right">
+                                                                        <div class="text-muted opacity-6">Variable B</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-progress-wrapper mt-1">
+                                                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 32%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="widget-content">
+                                                            <div class="widget-content-outer">
+                                                                <div class="widget-content-wrapper">
+                                                                    <div class="widget-content-left">
+                                                                        <div class="widget-numbers fsize-3 text-muted">71%</div>
+                                                                    </div>
+                                                                    <div class="widget-content-right">
+                                                                        <div class="text-muted opacity-6">Variable C</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-progress-wrapper mt-1">
+                                                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100" style="width: 71%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="widget-content">
+                                                            <div class="widget-content-outer">
+                                                                <div class="widget-content-wrapper">
+                                                                    <div class="widget-content-left">
+                                                                        <div class="widget-numbers fsize-3 text-muted">41%</div>
+                                                                    </div>
+                                                                    <div class="widget-content-right">
+                                                                        <div class="text-muted opacity-6">Variable D</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="widget-progress-wrapper mt-1">
+                                                                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100" style="width: 41%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card mb-3 widget-content">
+                                    <div class="widget-content-outer">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">SpO2 (Oxigen)</div>
+                                                <div class="widget-subheading">Oxigen 2 sat.</div>
+                                            </div>
+                                            <div class="widget-content-right">
+                                                <div class="widget-numbers text-success">{{ spo2 }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card mb-3 widget-content">
+                                    <div class="widget-content-outer">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Glucose:</div>
+                                                <div class="widget-subheading">Glucose in blood</div>
+                                            </div>
+                                            <div class="widget-content-right">
+                                                <div class="widget-numbers text-warning">{{ glucose }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-4">
+                                <div class="card mb-3 widget-content">
+                                    <div class="widget-content-outer">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Body Temperature:</div>
+                                                <div class="widget-subheading">Temperature</div>
+                                            </div>
+                                            <div class="widget-content-right">
+                                                <div class="widget-numbers text-danger">{{ bt }}º</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-xl-none d-lg-block col-md-6 col-xl-4">
+                                <div class="card mb-3 widget-content">
+                                    <div class="widget-content-outer">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Income</div>
+                                                <div class="widget-subheading">Expected totals</div>
+                                            </div>
+                                            <div class="widget-content-right">
+                                                <div class="widget-numbers text-focus">$147</div>
+                                            </div>
+                                        </div>
+                                        <div class="widget-progress-wrapper">
+                                            <div class="progress-bar-sm progress-bar-animated-alt progress">
+                                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 54%;"></div>
+                                            </div>
+                                            <div class="progress-sub-label">
+                                                <div class="sub-label-left">Expenses</div>
+                                                <div class="sub-label-right">100%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card">
+                                    <div class="widget-content">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pr-2 fsize-1">
+                                                    <div class="widget-numbers mt-0 fsize-3 text-success">96</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" style="width: 54%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left fsize-1">
+                                                <div class="text-muted opacity-6">Oxygen average (1h)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-shadow-warning mb-3 widget-chart widget-chart2 text-left card">
+                                    <div class="widget-content">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pr-2 fsize-1">
+                                                    <div class="widget-numbers mt-0 fsize-3 text-warning">101</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="101" aria-valuemin="0" aria-valuemax="200" style="width: 51%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left fsize-1">
+                                                <div class="text-muted opacity-6">Glucose average (1h)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
+                                    <div class="widget-content">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pr-2 fsize-1">
+                                                    <div class="widget-numbers mt-0 fsize-3 text-danger">36.4º</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="36.4" aria-valuemin="25" aria-valuemax="45" style="width: 52%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left fsize-1">
+                                                <div class="text-muted opacity-6">Temperature average (1h)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-shadow-info mb-3 widget-chart widget-chart2 text-left card">
+                                    <div class="widget-content">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper">
+                                                <div class="widget-content-left pr-2 fsize-1">
+                                                    <div class="widget-numbers mt-0 fsize-3 text-info">10%</div>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="progress-bar-xs progress">
+                                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left fsize-1">
+                                                <div class="text-muted opacity-6">Blood pressure (variation)</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

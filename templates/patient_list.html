@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Soraia Dashboard</title>
+    <title>Soraia Patient list</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
@@ -20,8 +20,7 @@
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-<!--<link href="./main.css" rel="stylesheet">-->
-<link href="./static/styles/main.css" rel="stylesheet">
+    <link href="./static/styles/main.css" rel="stylesheet">
 </head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -67,7 +66,7 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                <i class="nav-link-icon fa fa-info"> </i>
+                                <i class="nav-link-icon fa fa-database"> </i>
                                 Statistics
                             </a>
                         </li>
@@ -119,9 +118,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>        </div>
+                    </div>        
+                </div>
             </div>
-        </div>        <div class="ui-theme-settings">
+        </div>        
+        <div class="ui-theme-settings">
             <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
             </button>
@@ -436,7 +437,7 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Home</li>
                                 <li>
-                                    <a href="index.html" class="mm-active">
+                                    <a href="index.html" class="">
                                         <i class="metismenu-icon pe-7s-home"></i>
                                         Home
                                     </a>
@@ -444,38 +445,38 @@
                                 <li>
                                     <a href="register.html">
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Register & Triage
+                                        Register
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">Dashboard</li>
                                 <li>
-                                    <a href="#">
-                                        <i class="metismenu-icon pe-7s-car"></i>
-                                        Boxes
-                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-car"></i>
+                                    Boxes
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                    <a href="box1.html">
+                                        <i class="metismenu-icon pe-7s-display2"></i>
+                                        Box 1 Dashboard
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="box1.html">
-                                                <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 1 Dashboard
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="box2.html">
-                                                <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 2 Dashboard
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="box3.html">
-                                                <i class="metismenu-icon pe-7s-display2"></i>
-                                                Box 3 Dashboard
-                                            </a>
-                                        </li>
+                                    </li>
+                                    <li>
+                                    <a href="box2.html">
+                                        <i class="metismenu-icon pe-7s-display2"></i>
+                                        Box 2 Dashboard
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="box3.html">
+                                        <i class="metismenu-icon pe-7s-display2"></i>
+                                        Box 3 Dashboard
+                                    </a>
+                                    </li>
                                     </ul>
                                 </li>
-                                <li class="app-sidebar__heading">Alerts</li>
+                                <li class="app-sidebar__heading">Alertas</li>
                                 <li>
                                     <a href="alertas.html">
                                         <i class="metismenu-icon pe-7s-alarm"></i>
@@ -484,7 +485,7 @@
                                 </li>
                                 <li class="app-sidebar__heading">Patients</li>
                                 <li>
-                                    <a href="patient_list.html">
+                                    <a href="patient_list.html" class="mm-active">
                                         <i class="metismenu-icon pe-7s-like"></i>Patient list
                                     </a>
                                 </li>
@@ -496,22 +497,23 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="patient_medical_data.html">
+                                            <a href="elements-buttons-standard.html">
                                                 <i class="metismenu-icon"></i>Patient 1
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="patient_medical_data.html">
+                                            <a href="elements-dropdowns.html">
                                                 <i class="metismenu-icon"></i>Patient 2
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="patient_medical_data.html">
+                                            <a href="elements-icons.html">
                                                 <i class="metismenu-icon"></i>Patient 3
                                             </a>
                                         </li>
                                     </ul>
-                                <li class="app-sidebar__heading">Charts & tables</li>
+                                </li>
+                                <li class="app-sidebar__heading">Charts</li>
                                 <li>
                                     <a href="charts-chartjs.html">
                                         <i class="metismenu-icon pe-7s-graph2">
@@ -534,10 +536,11 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-home icon-gradient bg-mean-fruit"></i>
+                                        <i class="pe-7s-home icon-gradient bg-mean-fruit">
+                                        </i>
                                     </div>
-                                    <div>Soraia main board
-                                        <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.
+                                    <div>Soraia patient list in progress
+                                        <div class="page-title-subheading">.
                                         </div>
                                     </div>
                                 </div>
@@ -647,11 +650,138 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="" align="center">
-                                    <img src="./static/images/main.png">
+                                <div class="main-card mb-3 card">
+                                    <div class="card-header">Patients
+                                        <div class="btn-actions-pane-right">
+                                            <div role="group" class="btn-group-sm btn-group">
+                                                <button class="active btn btn-focus">Last hour</button>
+                                                <button class="btn btn-focus">Day</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center">#ID</th>
+                                                <th>Box</th>
+                                                <th class="text-center">Name</th>
+                                                <th class="text-center">Status</th>
+                                                <th class="text-center">Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for row in patients %} 
+                                            <tr>
+                                                <td class="text-center text-muted">{{ row[0] }}</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/4.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">{{ row[3] }}</div>
+                                                                <div class="widget-subheading opacity-7">Age: {{ row[2] }}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">{{ row[1] }}</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-warning">Pending</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-1" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr>
+                                            {% endfor %} 
+                                            <tr>
+                                                <td class="text-center text-muted">#347</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/3.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">2</div>
+                                                                <div class="widget-subheading opacity-7">Age: 62</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Runge Cutta</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-success">Completed</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-2" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center text-muted">#321</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/2.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">3</div>
+                                                                <div class="widget-subheading opacity-7">Age: 55</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Andres Calamares</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-danger">In Progress</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-3" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center text-muted">#55</td>
+                                                <td>
+                                                    <div class="widget-content p-0">
+                                                        <div class="widget-content-wrapper">
+                                                            <div class="widget-content-left mr-3">
+                                                                <div class="widget-content-left">
+                                                                    <img width="40" class="rounded-circle" src="assets/images/avatars/1.jpg" alt=""></div>
+                                                            </div>
+                                                            <div class="widget-content-left flex2">
+                                                                <div class="widget-heading">4</div>
+                                                                <div class="widget-subheading opacity-7">Afe: 40</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">Winni de Poo</td>
+                                                <td class="text-center">
+                                                    <div class="badge badge-info">On Hold</div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" id="PopoverCustomT-4" class="btn btn-primary btn-sm">Details</button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-block text-center card-footer">
+                                        <!--<button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger"><i class="pe-7s-trash btn-icon-wrapper"> </i></button>
+                                        <button class="btn-wide btn btn-success">Save</button>-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
